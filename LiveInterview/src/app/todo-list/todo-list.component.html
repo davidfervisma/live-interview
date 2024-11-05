@@ -1,0 +1,12 @@
+<!-- src/app/todo-list/todo-list.component.html -->
+<div>
+    <h2>{{title}}</h2>
+    <form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+        <input formControlName="newTodo" placeholder="Add a new todo" />
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        <li *ngFor="let todo of todos">{{ todo }}</li>
+    </ul>
+</div>
